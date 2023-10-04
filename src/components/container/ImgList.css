@@ -1,0 +1,9 @@
+.img-container {
+  width: 98vw;
+  height: 30vh;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 1rem;
+}

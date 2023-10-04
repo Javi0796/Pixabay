@@ -16,9 +16,7 @@ const Api = ( {id} ) => {
       }, [url]);
 
     return (
-        <div className='container'>
-            <ImgList obj={api}></ImgList>
-        </div>
+        <ImgList obj={api}></ImgList>
     );
 };
 

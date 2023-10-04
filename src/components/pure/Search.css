@@ -1,0 +1,19 @@
+.search-form{
+  padding: 0.5rem;
+  margin: 1rem;
+  & .row .item-2{
+    background-color:cornflowerblue;
+    border-color: dodgerblue;
+    color: white;
+  }
+}
+
+.search-form .row .item-1:hover{
+  box-shadow: 0px 0px 7px 7px #8bbdf7;
+  -webkit-box-shadow: 0px 0px 7px 7px #8bbdf7;
+}
+
+.search-form .row .item-2:hover{
+  box-shadow: 0px 0px 10px 10px rgb(221, 251, 253);
+  -webkit-box-shadow: 0px 0px 10px 10px rgb(221, 251, 253);
+}

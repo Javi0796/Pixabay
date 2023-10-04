@@ -1,40 +1,30 @@
 import React, { useState } from 'react';
 import Search from '../pure/Search';
 import Api from './Api';
-import styled from 'styled-components';
+import './Searcher.css';
 
 const Searcher = () => {
-    const [termino, setTermino] = useState('ejemplo');
+    const [termino, setTermino] = useState();
     const [isHidden, setHidden] = useState(false);
 
-    const DivRoot = styled.div`
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        flex-direction: column;
-    `;
-
-    const DivJumb = styled.div`
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-    `;
-    
     function datosBusqueda(termino) {
       setTermino(termino);
       setHidden(true);
     }
   
     return (
-      <DivRoot className="app container">
-        <DivJumb className="jumbotron">
-          <Search
-            datos={datosBusqueda}>
-          </Search>
-        </DivJumb>
-        {isHidden && <Api id={termino}></Api>}
-      </DivRoot>
+      <div className='container-fluid'>
+        <div className="jumbotron row">
+          <span className='col-2 tittle'>Api</span>
+          <div className='container col-8'>
+            <Search
+              datos={datosBusqueda}>
+            </Search>
+          </div>
+          <span className='col-2 tittle'>Pixabay</span>
+        </div>
+        {isHidden && <Api className="row" id={termino}></Api>}
+      </div>
     );
 };
 

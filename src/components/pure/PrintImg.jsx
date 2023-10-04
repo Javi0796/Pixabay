@@ -1,16 +1,23 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Img from '../../models/img'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Img from '../../models/Img';
+import "./PrintImg.css";
 
 function PrintImg( {  picture } ) {
-  console.log(picture.img);
   return (
-    <div className="card">
-    <img src={picture.img} className="card-img-top" alt="img"/>
-      <div className="card-body">
-       <h5 className="card-title">Descargas: {picture.downloads}</h5>
-        <p className="card-text">Likes: {picture.likes}</p>
-        <a href={picture.url} className="btn btn-primary">Website</a>
+    <div className='Image'>
+      <a href={picture.url}>
+        <img className='pic' src={picture.img} alt={picture.tags}/>
+      </a>
+      <div className='row overlay'>
+        <div className='col-4 likes'>
+          <i class="bi bi-bookmark-heart-fill"></i>
+          <span>{picture.likes}</span>
+        </div>
+        <div className='col-6 downloads'>
+          <i class="bi bi-download"></i>
+          <span>{picture.downloads}</span>
+        </div>
       </div>
     </div>
   )
