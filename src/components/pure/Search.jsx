@@ -21,7 +21,9 @@ const Search = ( {datos} ) => {
                         <input ref={busquedaRef}
                         type='text' 
                         className='form-control form-control-lg item-1' 
-                        placeholder='Busca tu imagen'/>
+                        placeholder='Busca tu imagen'
+                        required
+                        />
                     </div>
                     <div className='form-group col-md-2'>
                         <input type='submit' 

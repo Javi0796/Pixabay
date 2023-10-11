@@ -7,6 +7,7 @@ const Searcher = () => {
     const [termino, setTermino] = useState();
     const [isHidden, setHidden] = useState(false);
 
+    // Función que se ha mandado como prop al componente Search, busca guardar la palabra a buscar
     function datosBusqueda(termino) {
       setTermino(termino);
       setHidden(true);

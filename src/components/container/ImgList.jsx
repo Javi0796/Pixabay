@@ -6,6 +6,7 @@ import "./ImgList.css";
 function ImgList( {obj} ) {
   const [list, setList] = useState([new Img()]);
 
+  // Con el hook, creamos el objeto a partir de la respuesta recibida
   useEffect(() => {
     let aux = obj?.map((o, i) => {
       let imgAux = new Img(o.tags, o.downloads, o.likes, o.webformatURL, o.pageURL);
